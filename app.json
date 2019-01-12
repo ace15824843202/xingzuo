@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/xz_index/xz_index",
+    "pages/xz_info/xz_info",
+    "pages/bazi/bazi"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "万年历and星座运势",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#f99459",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "iconPath":"static/calendar.png",
+        "selectedIconPath":"static/calendar_active.png",
+        "text": "万年历"
+      },{
+        "pagePath": "pages/xz_index/xz_index",
+        "iconPath": "static/xingxing.png",
+        "selectedIconPath": "static/xingxing_active.png",
+        "text": "星座运势"
+      }]
+  }
+}

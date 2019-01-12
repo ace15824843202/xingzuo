@@ -1,0 +1,85 @@
+<!--pages/xz_index/xz_index.wxml-->
+<!-- 
+白羊座
+金牛座
+双子座
+巨蟹座
+狮子座
+处女座
+天秤座
+天蝎座
+射手座
+摩羯座
+水瓶座
+双鱼座
+ -->
+<view class='xzContainer'>
+  <view class='xzItem'>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=baiyang&starname=白羊座&index=1'>
+      <image src='/static/xz_1.jpg' class='xzThumbnail'></image>
+      <text>白羊座</text>
+      <text>3.21-4.19</text>
+    </navigator>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=jinniu&starname=金牛座&index=2'>
+      <image src='/static/xz_2.jpg' class='xzThumbnail'></image>
+      <text>金牛座</text>
+      <text>4.20-5.20</text>
+    </navigator>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=shuangzi&starname=双子座&index=3'>
+      <image src='/static/xz_3.jpg' class='xzThumbnail'></image>
+      <text>双子座</text>
+      <text>5.21-6.21</text>
+    </navigator>
+  </view>
+  <view class='xzItem'>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=juxie&starname=巨蟹座&index=4'>
+      <image src='/static/xz_4.jpg' class='xzThumbnail'></image>
+      <text>巨蟹座</text>
+      <text>6.22-7.22</text>
+    </navigator>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=shizi&starname=狮子座&index=5'>
+      <image src='/static/xz_5.jpg' class='xzThumbnail'></image>
+      <text>狮子座</text>
+      <text>7.23-8.22</text>
+    </navigator>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=chunv&starname=处女座&index=6'>
+      <image src='/static/xz_6.jpg' class='xzThumbnail'></image>
+      <text>处女座</text>
+      <text>8.23-9.22</text>
+    </navigator>
+  </view>
+  <view class='xzItem'>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=tiancheng&starname=天秤座&index=7'>
+      <image src='/static/xz_7.jpg' class='xzThumbnail'></image>
+      <text>天秤座</text>
+      <text>9.23-10.23</text>
+    </navigator>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=tianxie&starname=天蝎座&index=8'>
+      <image src='/static/xz_8.jpg' class='xzThumbnail'></image>
+      <text>天蝎座</text>
+      <text>10.24-11.22</text>
+    </navigator>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=sheshou&starname=射手座&index=9'>
+      <image src='/static/xz_9.jpg' class='xzThumbnail'></image>
+      <text>射手座</text>
+      <text>11.23-12.21</text>
+    </navigator>
+  </view>
+  <view class='xzItem'>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=mojie&starname=摩羯座&index=10'>
+      <image src='/static/xz_10.jpg' class='xzThumbnail'></image>
+      <text>摩羯座</text>
+      <text>12.22-1.19</text>
+    </navigator>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=shuiping&starname=水瓶座&index=11'>
+      <image src='/static/xz_11.jpg' class='xzThumbnail'></image>
+      <text>水瓶座</text>
+      <text>1.20-2.18</text>
+    </navigator>
+    <navigator class='nav' url='/pages/xz_info/xz_info?star=shuangyu&starname=双鱼座&index=12'>
+      <image src='/static/xz_12.jpg' class='xzThumbnail'></image>
+      <text>双鱼座</text>
+      <text>2.19-3.20</text>
+    </navigator>
+  </view>
+</view>

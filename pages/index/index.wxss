@@ -1,0 +1,52 @@
+.w50{
+  width: 50rpx;
+  height: 50rpx;
+}
+.nowDtxt{
+  width: 500rpx;
+  height: 50rpx;
+}
+.calendarContainer{
+  padding: 30rpx;
+}
+.dateTitle{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.txtGongLi{
+  font-size: 50rpx;
+  color: red;
+  padding-left: 15rpx;
+}
+.dateHd{
+  display: flex;
+  justify-content: space-between
+}
+.dateHd2{
+  display: flex;
+  justify-content: flex-end;
+}
+.nowTxt{
+  background-color:#ef4037;
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  border-radius: 50%;
+}
+.item{
+  padding: 20rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #e5e9ea;
+}
+.key{
+  padding-right: 15rpx;
+  color: #ef9c3a;
+}
+.btnone{
+  border-bottom: none;
+}

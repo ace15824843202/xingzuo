@@ -1,0 +1,90 @@
+<view class='calendarContainer'>
+
+  <view class='{{ isShowNow ? "dateHd":"dateHd2" }}'>
+   
+    <block wx:if="{{isShowNow}}">
+      <text 
+      class='nowTxt'
+      bindtap='getNow'
+      >今</text>
+    </block>
+  
+    <picker
+      mode="date"
+      bindchange='chooseDate'
+      class='chooseDate w50'
+      end="2021-01-01"
+      start="2015-01-01"
+    >
+      <image 
+      class='w50'
+      src="../../static/calendar.png"
+      ></image>
+    </picker>
+  </view>
+    
+  <view class='dateTitle'>
+    <!-- <image 
+    class='prevDate w50'
+    src="../../static/prev.png"
+    bindtap='prevDay'
+    ></image> -->
+    <text class='txtGongLi'>{{result.gongli}}</text>
+    <!-- <image 
+    class='nextDate w50'
+    src="../../static/next.png"
+    bindtap='nextDay'
+    ></image> -->
+
+
+  </view>
+  
+  <view class='item'>
+    <text class='key'>农历:</text><text class='value'>{{result.nongli}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>干支:</text><text class='value'>{{result.ganzhi}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>纳音:</text><text class='value'>{{result.nayin}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>生肖:</text><text class='value'>{{result.shengxiao}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>星座:</text><text class='value'>{{result.xingzuo}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>十二神:</text><text class='value'>{{result.sheng12}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>值日:</text><text class='value'>{{result.zhiri}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>冲煞:</text><text class='value'>{{result.chongsha}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>胎神吉方:</text><text class='value'>{{result.tszf}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>彭祖百忌:</text><text class='value'>{{result.pzbj}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>今日合害:</text><text class='value'>{{result.jrhh}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>宜:</text><text class='value'>{{result.yi}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>忌:</text><text class='value'>{{result.ji}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>吉神宜趋:</text><text class='value'>{{result.jsyq}}</text>
+  </view>
+  <view class='item'>
+    <text class='key'>24节气:</text><text class='value'>{{result.jieqi24}}</text>
+  </view>
+  <view class='item' wx:if="{{result.jier}}">
+    <text class='key'>节日:</text><text class='value'>{{result.jier}}</text>
+  </view>
+</view>

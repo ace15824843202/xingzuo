@@ -1,0 +1,117 @@
+/* pages/xz_info/xz_info.wxss */
+.xzInfoImage{
+  display: flex;
+}
+.xzInfoImage text{
+  font-size: 50rpx;
+  color: #ae9869;
+  padding-left: 20rpx;
+}
+.xzThumbnail{
+  border-radius: 50%;
+}
+
+.xzListContainer{
+  position: fixed;
+  bottom: -640rpx;
+  left: 0;
+  background: #fff;
+  padding: 20rpx;
+  width: 710rpx;
+  text-align: center;
+  font-size: 23rpx;
+}
+
+.xzListItem{
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+.xzListItem view{
+   width: 150rpx;
+}
+.xzListContainer .xzThumbnail{
+  width: 150rpx;
+  height: 150rpx;
+}
+.xzChooseTime{
+  display: none;
+}
+
+.xzInfoDayYs text{
+  display: block;
+
+}
+.btnQhxz{
+  text-align: right;
+}
+
+.xzContainer{
+  padding: 30rpx;
+}
+
+.item{
+  padding: 20rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #e5e9ea;
+}
+.key{
+  padding-right: 15rpx;
+  color: #ef9c3a;
+}
+
+.score_image{
+  width: 168rpx;
+  height: 33rpx;
+}
+
+.btnone{
+  border-bottom: none;
+}
+.ftInfoSc{
+  color: #ef9c3a;
+  font-weight: bold;
+  padding: 30rpx;
+}
+.scInfoList{
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #e5e9ea;
+  padding-bottom: 30rpx;
+}
+
+.showStar{
+  bottom: 0;
+  transition: all ease-in-out 0.2s;
+}
+
+
+
+.menu{width:60rpx;height:60rpx; position:fixed;right:10rpx; bottom:30rpx; }
+.menu_list{height:60rpx;width:60rpx; position:relative;}
+.home{width:60rpx;height:60rpx; line-height: 55rpx; font-size: 35rpx; text-align: center; background: #fff; border:4rpx solid rgb(102,102,102); color: rgb(102,102,102); border-radius: 50%; position:absolute; right:0;top:0;}
+.menu_list text{ display: block; width:56rpx; height:56rpx; line-height: 58rpx; border-radius: 50%; position:absolute;right:5rpx;top:0; color: #fff;font-size: 18rpx; text-align: center;transition: all 0.3s ease 0s;transform: rotate(0deg);}
+
+.aniActive text{
+  transform: rotate(360deg);
+}
+.aniActive text:nth-of-type(1){
+  left: 0rpx; top: -180rpx;
+}
+.aniActive text:nth-of-type(2){
+  left: -69rpx; top: -166rpx;
+}
+.aniActive text:nth-of-type(3){
+  left: -127rpx; top: -127rpx;
+}
+.aniActive text:nth-of-type(4){
+  left: -166rpx; top: -69rpx;
+}
+.aniActive text:nth-of-type(5){
+  left: -180rpx; top: 0rpx;
+}
+
+.menu_list text:nth-of-type(1){background:rgba(239,163,104,0.6);}
+.menu_list text:nth-of-type(2){background:rgba(117,192,157,0.6);}
+.menu_list text:nth-of-type(3){background:rgba(121,169,248,0.6);}
+.menu_list text:nth-of-type(4){background:rgba(129,196,133,0.6);}
+.menu_list text:nth-of-type(5){background:rgba(232,92,127,0.6);}

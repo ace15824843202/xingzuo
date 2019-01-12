@@ -1,0 +1,229 @@
+<!--pages/xz_info/xz_info.wxml-->
+
+<view class='xzContainer' bindtap='hide'>
+    <view class="btnQhxz">
+      <text catchtap='showStar'>切换星座</text>
+    </view>
+
+    <view class='xzListContainer {{ isShowStar ? "showStar" :"" }}'>
+        <view class='xzListItem'>
+          <view data-star='baiyang' data-starname="白羊座" bindtap="chooseStar">
+            <image src='/static/xz_1.jpg' class='xzThumbnail'></image>
+            <text>白羊座</text>
+          </view>
+          <view data-star='jinniu' data-starname="金牛座" bindtap="chooseStar">
+            <image src='/static/xz_2.jpg' class='xzThumbnail'></image>
+            <text>金牛座</text>
+          </view>
+          <view data-star='shuangzi' data-starname="双子座" bindtap="chooseStar">
+            <image src='/static/xz_3.jpg' class='xzThumbnail'></image>
+            <text>双子座</text>
+          </view>
+          <view data-star='juxie' data-starname="巨蟹座" bindtap="chooseStar">
+            <image src='/static/xz_4.jpg' class='xzThumbnail'></image>
+            <text>巨蟹座</text>
+          </view>
+        </view>
+        <view class='xzListItem'>
+           <view data-star='shizi' data-starname="狮子座" bindtap="chooseStar">
+              <image src='/static/xz_5.jpg' class='xzThumbnail'></image>
+              <text>狮子座</text>
+            </view>
+            <view data-star='chunv' data-starname="处女座" bindtap="chooseStar">
+              <image src='/static/xz_6.jpg' class='xzThumbnail'></image>
+              <text>处女座</text>
+            </view>
+            <view data-star='tiancheng' data-starname="天秤座" bindtap="chooseStar">
+              <image src='/static/xz_7.jpg' class='xzThumbnail'></image>
+              <text>天秤座</text>
+            </view>
+            <view data-star='tianxie' data-starname="天蝎座" bindtap="chooseStar">
+              <image src='/static/xz_8.jpg' class='xzThumbnail'></image>
+              <text>天蝎座</text>
+            </view>
+        </view>
+        <view class='xzListItem'>
+          <view data-star='sheshou' data-starname="射手座" bindtap="chooseStar">
+            <image src='/static/xz_9.jpg' class='xzThumbnail'></image>
+            <text>射手座</text>
+          </view>
+          <view data-star='mojie' data-starname="摩羯座" bindtap="chooseStar">
+            <image src='/static/xz_10.jpg' class='xzThumbnail'></image>
+            <text>摩羯座</text>
+          </view>
+          <view data-star='shuiping' data-starname="水瓶座" bindtap="chooseStar">
+            <image src='/static/xz_11.jpg' class='xzThumbnail'></image>
+            <text>水瓶座</text>
+          </view>
+          <view data-star='shuangyu' data-starname="双鱼座" bindtap="chooseStar">
+            <image src='/static/xz_12.jpg' class='xzThumbnail'></image>
+            <text>双鱼座</text>
+          </view>
+        </view>
+    </view>
+
+
+    <view class='xzInfoHd'>
+      <view class='xzInfoImage'>
+        <!-- <image
+        src="/static/xz_{{index}}.jpg"
+        class="xzThumbnail"
+        ></image> -->
+        <text>{{starname}}</text>
+      </view>
+      
+    </view>
+    <!--  以上星座头像 ，星座名称，整体运势，-->
+
+    <view class='xzInfoZhiShu'>
+      <view class='item' wx:if="{{result.summary_star}}">
+          <text class="key">{{starTypeInfo}}：</text><!-- {{result.summary_star}} -->
+          <image
+            src="/static/score_{{result.summary_star}}.jpg"
+            class="score_image"
+          ></image>
+      </view>
+      <view class='item' wx:if="{{result.love_star}}">
+        <text class="key">爱情指数：</text><!-- {{result.love_star}} -->
+        <image
+          src="/static/score_{{result.love_star}}.jpg"
+          class="score_image"
+        ></image>
+      </view>
+      <view class='item' wx:if="{{result.money_star}}">
+        <text class="key">财运指数：</text><!-- {{result.money_star}} -->
+        <image
+          src="/static/score_{{result.money_star}}.jpg"
+          class="score_image"
+        ></image>
+      </view>
+      <view class='item' wx:if="{{result.work_star}}">
+        <text class="key">工作指数：</text><!-- {{result.work_star}} -->
+        <image
+          src="/static/score_{{result.work_star}}.jpg"
+          class="score_image"
+        ></image>
+      </view>
+      <view class='item' wx:if="{{result.lucky_num}}">
+        <text class="key">幸运数字：</text>{{result.lucky_num}}
+      </view>
+      <view class='item' wx:if="{{result.grxz}}">
+        <text class="key">贵人星座：</text>{{result.grxz}}
+      </view>
+      <view class='item' wx:if="{{result.lucky_color}}">
+        <text class="key">幸运颜色：</text>{{result.lucky_color}}
+      </view>
+      <view class='item' wx:if='{{result.ucky_time}}'>
+        <text class="key">吉时：</text>{{result.ucky_time}}
+      </view>
+      <view class='item' wx:if="{{result.lucky_direction}}">
+        <text class="key">吉时方位：</text>{{result.lucky_direction}}
+      </view>
+      <view class='item' wx:if="{{result.day_notice}}">
+        <text class="key">今日提醒：</text>{{result.day_notice}}
+      </view>
+
+      
+    <!--↑ 以上一些指数 今日、明日、本周、本月 -->
+
+      <view class='item' wx:if="{{scoreYearImageIndex.general_i}}">
+          <text class="key">综合指数：</text><!-- {{result.general_index}} -->
+          <image
+            src="/static/score_{{scoreYearImageIndex.general_i}}.jpg"
+            class="score_image"
+          ></image>
+      </view>
+      <view class='item' wx:if="{{scoreYearImageIndex.love_i}}">
+          <text class="key">爱情指数：</text><!-- {{result.love_index}} -->
+          <image
+            src="/static/score_{{scoreYearImageIndex.love_i}}.jpg"
+            class="score_image"
+          ></image>
+      </view>
+      <view class='item' wx:if="{{scoreYearImageIndex.money_i}}">
+          <text class="key">财富指数：</text><!-- {{result.money_index}} -->
+          <image
+            src="/static/score_{{scoreYearImageIndex.money_i}}.jpg"
+            class="score_image"
+          ></image>
+      </view>
+      <view class='item' wx:if="{{scoreYearImageIndex.work_i}}">
+          <text class="key">工作指数：</text><!-- {{result.work_index}} -->
+          <image
+            src="/static/score_{{scoreYearImageIndex.work_i}}.jpg"
+            class="score_image"
+          ></image>
+      </view>
+
+
+    </view>
+
+
+
+
+
+
+    <view class='xzInfoText'>
+      <block wx:if="{{result.general_txt}}">
+        <view class="ftInfoSc">综合运势</view>
+        <view class="scInfoList">
+          {{result.general_txt}}
+        </view>
+      </block>
+      <block wx:if="{{result.oneword}}">
+        <view class="ftInfoSc">一句话简评</view>
+        <view class="scInfoList">
+          {{result.oneword}}
+        </view>
+      </block>      
+      <block wx:if="{{result.health_txt}}">
+        <view class="ftInfoSc">健康运势</view>
+        <view class="scInfoList">
+            {{result.health_txt}}
+        </view>
+      </block>
+      <block wx:if="{{result.love_txt}}">
+        <view class="ftInfoSc">爱情运势</view>
+        <view class="scInfoList">
+          {{result.love_txt}}
+        </view>
+      </block>
+      <block wx:if="{{result.work_txt}}">
+        <view class="ftInfoSc">工作运势</view>
+        <view class="scInfoList">
+          {{result.work_txt}}
+        </view>
+      </block>
+      <block wx:if="{{result.money_txt}}">
+        <view class="ftInfoSc">财富运势</view>
+        <view class="scInfoList">
+            {{result.money_txt}}
+        </view>
+      </block>
+    </view>
+    <!-- 以上星座文字描述 -->
+
+    <view class='xzChooseTime'>
+      <text>明日</text>
+      <text>本周</text>
+      <text>本月</text>
+      <text>本年</text>
+    </view>
+
+
+  <view id="menu" class='menu'>
+    <view id="menu_list" class='menu_list {{ isShowMenu ? "aniActive" :"" }}' bindtap="chooseDateStar">
+        <text data-type="1">明日</text>
+        <text data-type="2">本周</text>
+        <text data-type="3">本月</text>
+        <text data-type="4">本年</text>
+        <text data-type="0">今日</text>
+    </view>
+    <view id="home" class='home' catchtap='showMenu'>＋</view>
+  </view>
+
+
+</view>
+
+
+
